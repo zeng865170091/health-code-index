@@ -12,8 +12,8 @@
 - 粤康码模拟（[GitHub](https://github.com/ilovexjp/ykm-simulator)）
 - 苏康码模拟（[GitHub](https://github.com/ilovexjp/skm-simulator)）
 - 北京健康宝模拟（[GitHub](https://github.com/ilovexjp/jkb-simulator)）
-- 四川天府健康通模拟
-- 随申码模拟
+- 四川天府健康通模拟（[GitHub](https://github.com/ilovexjp/tfjkt-simulator)）
+- 随申码模拟（[GitHub](https://github.com/ilovexjp/ssm-simulator)）
 
 ## 使用说明
 
