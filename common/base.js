@@ -45,20 +45,18 @@ const presetFilters = {
 };
 
 function addStorageField(id, selector, name, placeholder, filter = (x) => x) {
-  placeholder = filter(placeholder);
   const elements = document.querySelectorAll(selector);
   for (const element of elements) {
-    element.innerText = localStorage.getItem(id) || placeholder;
+    element.innerText = filter(localStorage.getItem(id) || placeholder);
     element.addEventListener("click", () => {
-      let res = window.prompt("修改" + name + "：", element.innerText);
+      let res = window.prompt("修改" + name + "：", localStorage.getItem(id) || placeholder);
       if (res == "" || res == null) {
         localStorage.removeItem(id);
       } else {
-        res = filter(res);
         localStorage.setItem(id, res);
       }
       for (const _element of elements) {
-        _element.innerText = res || placeholder;
+        _element.innerText = filter(res || placeholder);
       }
     });
   }

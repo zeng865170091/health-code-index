@@ -132,7 +132,7 @@
   const items = [
     {
       "title": "通信大数据行程卡",
-      "icon": "trip-card/favicon.ico",
+      "icon": "trip-card/static/img_arrow@2x.png",
       "link": "trip-card",
       "help_text": "点击手机号或途经地点可以修改相关信息。",
       "menu": [
@@ -209,6 +209,11 @@
       ]
     },
   ];
+  
+  function onIconFail(t) {
+    t.parentElement.remove();
+  }
+
   function render() {
     let html = "";
     for (const item of items) {
@@ -232,7 +237,7 @@
       }
       html += `
       <div class="item-wrapper" data-link="${item.link || ""}">
-        <img src="${item.icon}">
+        <img src="${item.icon}" onerror="onIconFail(this);">
         <div class="item-description">
           <div class="item-title-wrapper">
             <span class="item-title">${item.title}</span>
@@ -306,4 +311,6 @@
   </div>
 </div>
 
-<script>render();</script>
+<script>
+  render();
+</script>
