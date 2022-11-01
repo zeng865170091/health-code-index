@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>健康码模拟</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
 <link rel="manifest" href="manifest.json">
@@ -7,7 +8,7 @@
 <style>
   body {
     font-family: sans-serif;
-    margin: 0 4%;
+    margin: 20px 4%;
     background-color: rgba(0, 0, 0, .01);
   }
   .apps-list {
@@ -108,7 +109,7 @@
     color: rgba(0, 0, 0, .6);
     border-radius: 4px;
     padding: 4px 6px;
-    margin: 2px 12px 2px 0;
+    margin: 2px 9px 2px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -229,6 +230,11 @@
       "help_text": "点击姓名、证件号可以修改对应信息；<br>点击照片可以更改或移除照片，超过 4MB 的图片可能无法在本地保存；<br>点击右上角二维码标志可以在 “本人健康码自查询” 和 “本人信息扫码登记” 间切换；<br>点击 “未见异常” 可以切换 “通勤” 标志。",
       "menu": [
         {
+          "title": "扫描",
+          "icon": "qr_code_scanner",
+          "link": "jkb/scan.html"
+        },
+        {
           "title": "场所",
           "icon": "place",
           "link": "jkb/checkin.html"
@@ -283,7 +289,13 @@
       "link": "hubei-hc",
       "color": "#af9bff",
       "help_text": "点击姓名、证件号可以修改对应信息；<br>点击通信行程卡“点击核验”可以添加行程戳。",
-    }
+    },
+    {
+      "title": "湖南电子健康卡",
+      "icon": "hunan-hc/static/logo-b18dcf7bf55c412ec04989061d0512ad.png",
+      "link": "hunan-hc",
+      "help_text": "点击姓名、证件号、采样点等可以修改对应信息。<br>Credit: @uodedcli",
+    },
   ];
   
   function onIconFail(t) {
@@ -457,7 +469,7 @@
     <span onclick="window.confirm('确定清除本地存储的全部信息？') && (localStorage.clear() || window.location.reload());">清除本地数据</span>
   </div>
   <div class="link-wrapper">
-    <span>上次更新：2022-10-31</span>
+    <span>上次更新：2022-11-01</span>
   </div>
 </div>
 
