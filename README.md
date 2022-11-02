@@ -41,3 +41,19 @@ GitHub 曾以违反 TOS（服务条款）为由删除我们的仓库及 GitHub P
 这个项目的源码不含与除部署网页的服务器外其它服务器的交流，所有信息的更改保存在本地 `localStorage` 中，仅当前域可访问。更改信息时，清空输入框并确认可以恢复该项默认值；清除浏览器的浏览数据会恢复所有项的默认值。
 
 本项目**不保证**与官方页面同步更新，亦**不可用于**查验。
+
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEY2I1YhYJKwYBBAHaRw8BAQdAu4AEFt16c2jP44SLkVXL5RVdStGe1ZIkyAiZ
+xkXXEZG0Imlsb3ZleGpwIDxpbG92ZXhqcEBwcm90b25tYWlsLmNvbT6ImQQTFgoA
+QRYhBBn2Q9aKNyAO15whWfb8efKqiA9nBQJjYjViAhsDBQkB4TOABQsJCAcCAiIC
+BhUKCQgLAgQWAgMBAh4HAheAAAoJEPb8efKqiA9nx84A/2UJatLbVMX0vFzVmNco
+MncWqmoUnOdMTH1f2HqEKTpmAQDd3xBOA0WvQ8Y+9JsGoqYReeyP5op15e+DcQ1R
+ugE5Abg4BGNiNWISCisGAQQBl1UBBQEBB0DbiF0u9YLdeinVJZjUsGdkRUduSYpn
+0c/fy+f6BV2KawMBCAeIfgQYFgoAJhYhBBn2Q9aKNyAO15whWfb8efKqiA9nBQJj
+YjViAhsMBQkB4TOAAAoJEPb8efKqiA9n4GMBAMplVJcFsdIrgHwRw1mivYzHTmTx
+CAyNFxHJNMX9qyulAQCWBrzhr0+6CRN/QM4vgqKqmCtLpKG9+FzAMUi6w7TaBw==
+=Kgcp
+-----END PGP PUBLIC KEY BLOCK-----
+```
