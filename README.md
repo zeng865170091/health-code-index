@@ -20,11 +20,12 @@
 
 ## 使用说明
 
-- 可以整体作为 PWA (Progressive Web Apps) 安装
+- 可以在目录主页面整体作为 PWA (Progressive Web App) 安装
   - 在 Safari (iOS) 上，点击下方“分享”按钮，再点击“添加至主屏幕”
   - 在 Chrome (Android) 上，点击右上角菜单按钮，再点击“添加至主屏幕”
   - 在 Firefox (Android) 上，点击右上角菜单按钮，再点击“安装”
-- 亦可在不同的页面单独安装某一项目
+- 亦可以在各项目页面单独安装某一项目
+  - 如果遇到状态栏颜色问题，请尝试在目录主页面安装
 
 ## 网页 Demo
 
@@ -32,7 +33,7 @@ Cloudflare: [ilovexjp.pages.dev](https://ilovexjp.pages.dev)
 
 Netlify: [ilovexjp.netlify.app](https://ilovexjp.netlify.app)
 
-使用 Demo 时请注意：我们不会主动收集任何访问数据，但不保证网站托管的服务商不会收集访问信息。若担心隐私，可以可以从 [GitHub Releases](https://github.com/ilovexjp/health-code-index/releases) 中下载源码自行部署。
+使用 Demo 时请注意：我们不会主动收集任何访问数据，但不保证网站托管的服务商不会收集访问信息。若担心隐私，可以可以从 [GitHub Releases](https://github.com/ilovexjp/health-code-index/releases) 中下载源码自行部署到一台 Web 服务器上。可能需要 https 才能使用摄像头。
 
 ## 附言
 
