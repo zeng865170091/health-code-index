@@ -11,12 +11,14 @@
     margin: 20px 4%;
     background-color: rgba(0, 0, 0, .01);
   }
+
   .apps-list {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     margin-bottom: 16px;
   }
+
   .app {
     border-radius: 4px;
     padding: 8px;
@@ -27,42 +29,52 @@
     box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
     transition: all .1s ease-out;
   }
+
   .app.selected {
     opacity: 0.6;
   }
-  .app:has(.item-menu-item.active[data-role=pin]):not(.inactivated) {
+
+  .app:has(.app-menu-item.active[data-role=pin]):not(.inactivated) {
     order: -1;
   }
+
   .app.inactivated {
     order: 1000 !important;
   }
-  .app.inactivated .item-title {
+
+  .app.inactivated .app-title {
     color: rgba(0, 0, 0, .6);
     font-size: 14px;
     margin-left: 8px;
   }
-  .app.inactivated .item-title::after {
+
+  .app.inactivated .app-title::after {
     content: "暂不可用";
     margin-left: 5px;
     font-weight: normal;
   }
-  .app.inactivated .item-menu {
+
+  .app.inactivated .app-menu {
     display: none;
   }
-  .app.inactivated .item-content > img {
+
+  .app.inactivated .app-content>img {
     display: none;
   }
-  .app.inactivated .item-title-icon {
+
+  .app.inactivated .app-title-icon {
     display: none;
   }
-  .item-content {
+
+  .app-content {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
     user-select: none;
   }
-  .item-content > img {
+
+  .app-content>img {
     height: 54px;
     width: 54px;
     margin-right: 10px;
@@ -70,39 +82,46 @@
     border-radius: 100px;
     border: 2px dotted #aaa;
   }
-  .item-content > .item-description {
+
+  .app-content>.app-description {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  .item-title {
+
+  .app-title {
     font-size: 19px;
     font-weight: bold;
     flex-shrink: 0;
   }
-  .item-title-wrapper {
+
+  .app-title-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .item-title-icon {
+
+  .app-title-icon {
     height: 18px;
     width: 18px;
     margin-left: 5px;
     opacity: 0.6;
     transition: margin-left .1s ease-out;
   }
-  .app.selected .item-title-icon {
+
+  .app.selected .app-title-icon {
     margin-left: 16px;
   }
-  .item-menu {
+
+  .app-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 8px;
   }
-  .item-menu-item {
+
+  .app-menu-item {
     height: 20px;
     font-size: 15px;
     background-color: rgba(0, 0, 0, .05);
@@ -114,27 +133,34 @@
     flex-direction: row;
     align-items: center;
   }
-  .item-menu-item.active {
+
+  .app-menu-item.active {
     background-color: rgba(0, 0, 0, .9);
     color: rgba(255, 255, 255, .87);
   }
-  .item-menu-item[data-role=link]:hover {
+
+  .app-menu-item[data-role=link]:hover {
     background-color: rgba(0, 0, 0, .9);
     color: rgba(255, 255, 255, .87);
   }
-  .item-menu-item-icon {
+
+  .app-menu-app-icon {
     height: 18px;
     width: 18px;
   }
-  .item-menu-item.active .item-menu-item-icon {
+
+  .app-menu-item.active .app-menu-app-icon {
     filter: invert(1);
   }
-  .item-menu-item[data-role=link]:hover .item-menu-item-icon {
+
+  .app-menu-item[data-role=link]:hover .app-menu-app-icon {
     filter: invert(1);
   }
-  .item-menu-item-title {
+
+  .app-menu-app-title {
     margin-left: 2px;
   }
+
   .links-list {
     margin: 10px;
     display: flex;
@@ -144,6 +170,7 @@
     flex-wrap: wrap;
     color: rgba(0, 0, 0, .67);
   }
+
   .link-wrapper {
     margin: 2px 8px;
     display: flex;
@@ -151,25 +178,96 @@
     align-items: center;
     font-size: 14px;
   }
-  .link-wrapper > img {
+
+  .link-wrapper>img {
     width: 20px;
     height: 20px;
   }
-  .link-wrapper > span {
+
+  .link-wrapper>span {
     margin-left: 6px;
   }
-  .item-help {
+
+  .links-list-help {
+    color: #999;
+  }
+
+  .app-help {
     display: none;
     font-size: 14px;
     margin: 8px 4px 0 4px;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .05);
     color: rgba(0, 0, 0, .75);
     border-radius: 8px;
-    padding: 8px;
+    padding: 8px 12px;
     line-height: 150%;
   }
-  .links-list-help {
-    color: #999;
+
+  .app-help-subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 4px 0;
+  }
+  
+  .app-contributors-container {
+    margin-top: 8px;
+  }
+
+  .app-contributor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .app-contributor-namestrip {
+    margin-top: 4px;
+  }
+
+  .contributor-nametag {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 17px;
+    color: transparent;
+    background: linear-gradient(-68deg, rgba(7, 22, 246, 1) 0%, rgba(0, 209, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 4px 2px;
+    margin-right: 4px;
+  }
+
+  .app-contributor-namestrip .contributor-nametag {
+    margin: 0;
+    display: inline-block;
+    height: 21px;
+    background: rgb(9, 55, 121);
+    background: linear-gradient(68deg, rgba(249, 197, 7, 1) 0%, rgba(255, 0, 97, 1) 100%);
+    padding: 4px 12px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #fff;
+    -webkit-text-stroke: .5px rgba(0, 0, 0, .8);
+    text-stroke: .5px rgba(0, 0, 0, .8);
+  }
+
+  .contributor-description {
+    font-style: italic;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .app-contributor-namestrip .contributor-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px 4px 6px;
+    height: 19px;
+    border: 1px solid rgba(0, 0, 0, .6);
+    border-left-width: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #fff;
   }
 </style>
 
@@ -180,7 +278,7 @@
       "icon": "trip-card/static/img_arrow@2x.png",
       "link": "trip-card",
       "color": "#2ba667",
-      "help_text": "点击手机号或途经地点可以修改相关信息。",
+      "help_text": "<p>点击手机号或途经地点可以修改相关信息。</p>",
       "menu": [
       ]
     },
@@ -189,7 +287,7 @@
       "icon": "ykm/static/yss.jpeg",
       "link": "ykm",
       "color": "#aacc00",
-      "help_text": "点击姓名、城市、场所地址等可以修改对应信息；<br>点击二维码可以切换 “粤康码” 及 “粤康码场所通行” 页面。",
+      "help_text": "<p>点击姓名、城市、场所地址等可以修改对应<p>点击二维码可以切换 “粤康码” 及 “粤康码场所通行” 页面。</p>",
       "menu": [
         {
           "title": "场所",
@@ -208,7 +306,7 @@
       "icon": "skm/src/jszwfw.png",
       "link": "skm",
       "color": "#a3a8eb99",
-      "help_text": "点击姓名、证件号、场所地址等可以修改对应信息；<br>点击二维码可以展示签到页面。",
+      "help_text": "<p>点击姓名、证件号、场所地址等可以修改对应信息；</p><p>点击二维码可以展示签到页面。</p>",
       "menu": [
         {
           "title": "场所",
@@ -227,7 +325,7 @@
       "icon": "jkb/static/logo_jiankangbao1@2x.png",
       "link": "jkb",
       "color": "#fa6666",
-      "help_text": "点击姓名、证件号可以修改对应信息；<br>点击照片可以更改或移除照片，超过 4MB 的图片可能无法在本地保存；<br>点击右上角二维码标志可以在 “本人健康码自查询” 和 “本人信息扫码登记” 间切换；<br>点击 “未见异常” 可以切换 “通勤” 标志。",
+      "help_text": "<p>点击姓名、证件号可以修改对应信息；</p><p>点击照片可以更改或移除照片，超过 4MB 的图片可能无法在本地保存；</p><p>点击右上角二维码标志可以在 “本人健康码自查询” 和 “本人信息扫码登记” 间切换；</p><p>点击 “未见异常” 可以切换 “通勤” 标志。</p>",
       "menu": [
         {
           "title": "扫描",
@@ -246,7 +344,7 @@
       "icon": "tfjkt/static/message-icon.png",
       "link": "tfjkt",
       "color": "#0ba099",
-      "help_text": "点击姓名、证件号、场所地址等可以修改对应信息；<br>点击“扫场所码”展示场所码。",
+      "help_text": "<p>点击姓名、证件号、场所地址等可以修改对应信息；</p><p>点击“扫场所码”展示场所码。</p>",
       "menu": [
         {
           "title": "场所",
@@ -260,7 +358,7 @@
       "icon": "ssm/static/ssbapp-logo.png",
       "link": "ssm",
       "color": "#bf4046",
-      "help_text": "点击姓名、证件号、场所地址等可以修改对应信息；<br>点击照片可以更改或移除照片，超过 4MB 的图片可能无法在本地保存；<br>点击二维码展示场所码。",
+      "help_text": "<p>点击姓名、证件号、场所地址等可以修改对应信息；</p><p>点击照片可以更改或移除照片，超过 4MB 的图片可能无法在本地保存；</p><p>点击二维码展示场所码。</p>",
       "menu": [
         {
           "title": "场所",
@@ -274,12 +372,24 @@
       "icon": "shandong-hc/static/logo.png",
       "link": "shandong-hc",
       "color": "#68b82e",
-      "help_text": "点击姓名、证件号、场所地址等可以修改对应信息；<br>点击二维码可以切换到场所码页面。",
+      "help_text": "<p>点击姓名、证件号、场所地址等可以修改对应信息；</p><p>点击二维码可以切换到场所码页面。</p>",
       "menu": [
         {
           "title": "场所",
           "icon": "place",
           "link": "shandong-hc/index.html#checkin"
+        },
+        {
+          "title": "威海",
+          "icon": "place",
+          "link": "shandong-hc/weihai/index.html"
+        }
+      ],
+      "contributors": [
+        {
+          name: "LibertyNeverDies",
+          description: "参与制作",
+          style: "namestrip"
         }
       ]
     },
@@ -288,16 +398,37 @@
       "icon": "hubei-hc/static/QRlogo.png",
       "link": "hubei-hc",
       "color": "#af9bff",
-      "help_text": "点击姓名、证件号可以修改对应信息；<br>点击通信行程卡“点击核验”可以添加行程戳。",
+      "help_text": "<p>点击姓名、证件号可以修改对应信息；</p><p>点击通信行程卡“点击核验”可以添加行程戳。</p>",
     },
     {
       "title": "湖南电子健康卡",
       "icon": "hunan-hc/static/logo-b18dcf7bf55c412ec04989061d0512ad.png",
       "link": "hunan-hc",
-      "help_text": "点击姓名、证件号、采样点等可以修改对应信息。<br>Credit: @uodedcli",
+      "help_text": "<p>点击姓名、证件号、采样点等可以修改对应信息。</p>",
+      "contributors": [
+        {
+          name: "uodedcli",
+          description: "制作",
+          style: "namestrip"
+        },
+      ],
+    },
+    {
+      "title": "福建健康码",
+      "icon": "fujian-hc/static/jkm_logo.png",
+      "link": "fujian-hc",
+      "color": "#3a5eff",
+      "help_text": "<p>点击姓名、证件号可以修改对应信息。</p><p>点击 “扫一扫” 进入场所张贴码。</p>",
+      "menu": [
+        {
+          "title": "场所",
+          "icon": "place",
+          "link": "fujian-hc/checkin.html"
+        }
+      ]
     },
   ];
-  
+
   function onIconFail(t) {
     t.closest(".app").classList.add("inactivated");
   }
@@ -309,48 +440,75 @@
       if (item.menu) {
         for (const menu_item of item.menu) {
           menu_html += `
-            <div class="item-menu-item" data-role="link" data-link="${menu_item.link || ""}">
-              <img class="item-menu-item-icon" src="common/icons/${menu_item.icon || "qr_code"}.svg"></img>
-              <span class="item-menu-item-title">${menu_item.title}</span>
+            <div class="app-menu-item" data-role="link" data-link="${menu_item.link || ""}">
+              <img class="app-menu-app-icon" src="common/icons/${menu_item.icon || "qr_code"}.svg"></img>
+              <span class="app-menu-app-title">${menu_item.title}</span>
             </div>
           `;
         }
       }
       menu_html += `
-      <div class="item-menu-item ${localStorage.getItem("pinned")?.split(",").indexOf(item.link) >= 0 ? "active" : ""}" data-role="pin">
-        <img class="item-menu-item-icon" src="common/icons/push_pin.svg"></img>
+      <div class="app-menu-item ${localStorage.getItem("pinned")?.split(",").indexOf(item.link) >= 0 ? "active" : ""}" data-role="pin">
+        <img class="app-menu-app-icon" src="common/icons/push_pin.svg"></img>
       </div>`;
       if (item.help_text) {
         menu_html += `
-          <div class="item-menu-item" data-role="help">
-            <img class="item-menu-item-icon" src="common/icons/info.svg"></img>
+          <div class="app-menu-item" data-role="help">
+            <img class="app-menu-app-icon" src="common/icons/info.svg"></img>
           </div>
         `;
       }
+      let credits_html = "";
+      if (item.contributors) {
+        for (const contributor of item.contributors) {
+          if (contributor.style == "namestrip") {
+            credits_html += `
+              <div class="app-contributor app-contributor-namestrip">
+                <span class="contributor-nametag">${contributor.name}</span>
+                <span class="contributor-description">${contributor.description}</span>
+              </div>
+            `;
+          } else if (contributor.style == "text") {
+            credits_html += `
+              <div class="app-contributor">
+                <span class="contributor-nametag">${contributor.name}</span>
+                <span class="contributor-description">${contributor.description}</span>
+              </div>
+            `;
+          }
+        }
+      }
       html += `
       <div class="app" data-link="${item.link || ""}">
-        <div class="item-content">
+        <div class="app-content">
           <img src="${item.icon}" onerror="onIconFail(this);" style="border-color: ${item.color || "#aaa"};">
-          <div class="item-description">
-            <div class="item-title-wrapper">
-              <span class="item-title">${item.title}</span>
-              <img class="item-title-icon" src="common/icons/arrow_forward.svg"></img>
+          <div class="app-description">
+            <div class="app-title-wrapper">
+              <span class="app-title">${item.title}</span>
+              <img class="app-title-icon" src="common/icons/arrow_forward.svg"></img>
             </div>
-            <div class="item-menu">
+            <div class="app-menu">
               ${menu_html}
             </div>
           </div>
         </div>
-        <div class="item-help">
+        <div class="app-help">
+          <div class="app-help-subtitle">使用说明</div>
           ${item.help_text}
+          ${credits_html ? `
+            <div class="app-help-subtitle">致谢</div> 
+            <div class="app-contributors-container">
+              ${credits_html} 
+            </div>
+          ` : ""}
         </div>
       </div>`;
     }
     document.querySelector(".apps-list").innerHTML = html;
 
     const elements = [
-      ...document.querySelectorAll(".app:not(.inactivated)"), 
-      ...document.getElementsByClassName("item-menu-item")
+      ...document.querySelectorAll(".app:not(.inactivated)"),
+      ...document.getElementsByClassName("app-menu-item")
     ];
     if (elements.length) {
       for (const element of elements) {
@@ -366,16 +524,16 @@
           element.addEventListener("click", (e) => {
             e.stopPropagation();
             if (!element.classList.contains("active")) {
-              document.querySelectorAll(".item-help").forEach(element => {
+              document.querySelectorAll(".app-help").forEach(element => {
                 element.classList.remove("active");
               });
               element.classList.add("active");
               element.closest(".app")
-                  .getElementsByClassName("item-help")[0].style.display = "block";
+                .getElementsByClassName("app-help")[0].style.display = "block";
             } else {
               element.classList.remove("active");
               element.closest(".app")
-                  .getElementsByClassName("item-help")[0].style.display = "none";
+                .getElementsByClassName("app-help")[0].style.display = "none";
             }
           });
         } else if (data_role == "pin") {
@@ -412,7 +570,7 @@
           element.style.order = -1;
         }
         element.addEventListener("touchstart", (e) => {
-          if (!e.target.classList?.[0]?.startsWith("item-menu-item"))
+          if (!e.target.classList?.[0]?.startsWith("app-menu-item"))
             element.classList.add("selected");
         });
         element.addEventListener("touchmove", () => {
@@ -426,7 +584,7 @@
         });
       }
     }
-    for (const element of document.querySelectorAll(".item-menu-item[data-role=link]") || []) {
+    for (const element of document.querySelectorAll(".app-menu-item[data-role=link]") || []) {
       element.addEventListener("touchstart", () => {
         element.classList.add("active");
       });
@@ -441,7 +599,7 @@
       });
     }
 
-    for (const element of document.querySelectorAll(".item-help") || []) {
+    for (const element of document.querySelectorAll(".app-help") || []) {
       element.addEventListener("click", (e) => {
         e.stopPropagation();
       });
@@ -466,10 +624,11 @@
 
 <div class="links-list links-list-help">
   <div class="link-wrapper">
-    <span onclick="window.confirm('确定清除本地存储的全部信息？') && (localStorage.clear() || window.location.reload());">清除本地数据</span>
+    <span
+      onclick="window.confirm('确定清除本地存储的全部信息？') && (localStorage.clear() || window.location.reload());">清除本地数据</span>
   </div>
   <div class="link-wrapper">
-    <span>上次更新：2022-11-01</span>
+    <span>上次更新：2022-11-04</span>
   </div>
 </div>
 
