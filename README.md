@@ -15,8 +15,10 @@
 - 四川天府健康通模拟（[GitHub](https://github.com/ilovexjp/tfjkt-simulator)）
 - 随申码模拟（[GitHub](https://github.com/ilovexjp/ssm-simulator)）
 - 山东健康通行码模拟
+  - 威海场所码模拟（由 LibertyNeverDies 制作）
 - 湖北健康码（武汉）模拟
-- 湖南电子健康卡模拟（由 @uodedcli 制作）
+- 湖南电子健康卡模拟（由 uodedcli 制作）
+- 福建健康码模拟
 
 ## 使用说明
 
