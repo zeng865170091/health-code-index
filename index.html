@@ -2,12 +2,15 @@
 <title>健康码模拟</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" type="image/png" href="trip-card/static/img_arrow@2x.png">
+<link rel="icon" type="image/jpeg" href="common/logo.jpg">
+<link rel="apple-touch-icon" sizes="512x512" href="common/logo.jpg">
 
 <style>
   body {
-    font-family: sans-serif;
+    font-family: "PingFang SC", sans-serif;
     margin: 20px 4%;
     background-color: rgba(0, 0, 0, .01);
   }
@@ -381,7 +384,7 @@
         },
         {
           "title": "威海",
-          "icon": "place",
+          "icon": "map",
           "link": "shandong-hc/weihai/index.html"
         }
       ],
@@ -398,7 +401,14 @@
       "icon": "hubei-hc/static/QRlogo.png",
       "link": "hubei-hc",
       "color": "#af9bff",
-      "help_text": "<p>点击姓名、证件号可以修改对应信息；</p><p>点击通信行程卡“点击核验”可以添加行程戳。</p>",
+      "help_text": "<p>点击姓名、证件号等可以修改对应信息；</p><p>在武汉健康码中，点击通信行程卡“点击核验”可以添加行程戳。</p>",
+      "menu": [
+        {
+          "title": "其它城市",
+          "icon": "map",
+          "link": "hubei-hc/hubei"
+        }
+      ]
     },
     {
       "title": "湖南电子健康卡",
@@ -427,6 +437,13 @@
         }
       ]
     },
+    {
+      "title": "浙江健康码",
+      "icon": "zhejiang-hc/static/logo.ico",
+      "link": "zhejiang-hc",
+      "color": "#57ac6c",
+      "help_text": "<p>点击城市名、姓名、证件号可以修改对应信息。</p>",
+    }
   ];
 
   function onIconFail(t) {
@@ -628,7 +645,7 @@
       onclick="window.confirm('确定清除本地存储的全部信息？') && (localStorage.clear() || window.location.reload());">清除本地数据</span>
   </div>
   <div class="link-wrapper">
-    <span>上次更新：2022-11-04</span>
+    <span>上次更新：2022-11-08</span>
   </div>
 </div>
 
